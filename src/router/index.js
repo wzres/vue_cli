@@ -16,12 +16,12 @@ export default new VueRouter({
             children:[
                 {
                     // to 给路由命名
-                    name:'jz',
-                    path:'jz',
+                    name:'jiang',
+                    path:'jj',
                     component:City
                 },
                 {
-                    name:'gz',
+                    name:'zhou',
                     path:'gz',
                     component:City
                 },
@@ -32,7 +32,7 @@ export default new VueRouter({
             component:GuangDong,
             children:[
                 {
-                    name:'sz',
+                    name:'zhen',
                     // to_param 
                     path:'sz/:a1/:a2',  //使用占位符声明接收params参数
                     component:City,
