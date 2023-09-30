@@ -17,7 +17,7 @@ export default new VueRouter({
             component:JiangXi,
             children:[
                 {
-                    path:'jz',
+                    path:'jj',
                     component:JiuJiang,
                     props(t){
                         return {
