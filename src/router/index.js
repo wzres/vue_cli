@@ -31,9 +31,10 @@ const router = new VueRouter({
 
                     // 给路由对象添加自定义属性的话，需要在路由对象的meta（路由元）中定义。
                     // 属性名随意，这个值为true，表示需要鉴权
-                    // to_admin
+                    // to_meta
                     meta : {isAuth : true,title:"九江"},
-
+                    
+                    // to_admin4
                     /* 
                     1.这个局部路由守卫之独享守卫，代码写到哪里？写到route对象
                     2.beforeEnter本身就是一个函数，参数上没有回调函数了。
@@ -54,7 +55,7 @@ const router = new VueRouter({
                     path:'gz',
                     component:GanZhou,
                     // 属性名随意，这个值为true，表示需要鉴权
-                    // to_admin
+                    // to_meta
                     meta : {isAuth : true,title:'赣州'}
                 }
             ]
@@ -83,7 +84,7 @@ const router = new VueRouter({
     console.log(to)
     let loginName = "min"
     // 对于鉴权的路由比较少的情况下：
-    // to_admin
+    // to_admin1
     if(to.name=== 'jiang' || to.name === 'zhou'){
         if(loginName === "admin"){
             next()
@@ -91,7 +92,7 @@ const router = new VueRouter({
     }else next()
 
     // 对于鉴权的路由比较多的情况下：
-    // to_admin
+    // to_admin2
     if(to.meta.isAuth){
         if(loginName === "admin"){
             next()
@@ -103,6 +104,7 @@ const router = new VueRouter({
 
 // 全局后置路由守卫，初始化的时候被调用，每次路由切换之后被调用
 router.afterEach((to,from) =>{
+    // to_admin3
     document.title = to.meta.title || "城市系统"
 })
 
