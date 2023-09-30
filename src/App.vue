@@ -17,10 +17,9 @@
       <!-- 路由视图，告诉vue这个组件将来放到哪，其实就是起到一个占位的作用 -->
     <router-view></router-view>
 
+    <!-- to_keep -->
     <!-- keep-alive这个标签中所有的路由组件在切换的时候不会销毁 -->
-   <!--  <keep-alive>
-          <router-view></router-view>
-    </keep-alive> -->
+    
 
     <!-- include包含的组件不会销毁，注意：这里填写的是路由文件名字 -->
 
