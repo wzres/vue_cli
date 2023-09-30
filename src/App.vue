@@ -12,11 +12,23 @@
       <!--router-1ink 将来会被自动编译为a标签。-->
       <li><router-link to="/jiangxi" active-class="selected">江西省</router-link></li>
       <li><router-link to="/guangdong" active-class="selected">广东省</router-link></li>
-
     </ul>
     </div>
       <!-- 路由视图，告诉vue这个组件将来放到哪，其实就是起到一个占位的作用 -->
     <router-view></router-view>
+
+    <!-- keep-alive这个标签中所有的路由组件在切换的时候不会销毁 -->
+   <!--  <keep-alive>
+          <router-view></router-view>
+    </keep-alive> -->
+
+    <!-- include包含的组件不会销毁，注意：这里填写的是路由文件名字 -->
+
+
+    <!-- include也支持数组的形式 -->
+ 
+
+
   </div>
 
 </template>

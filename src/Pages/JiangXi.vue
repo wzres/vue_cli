@@ -3,9 +3,9 @@
         <h2>市</h2>
         <ul>
             <!-- 声明式路由导航，只适合超链接跳转路由组件 -->
-            <li><router-link to="/jiangxi/jz?a1=庐山市&a2=瑞金市" active-class="selected">九江市</router-link></li>
+            <li><input type="checkbox"><router-link to="/jiangxi/jz?a1=庐山市&a2=瑞金市" active-class="selected">九江市</router-link></li>
             <!-- to_nav 声明式路由导航 -->
-            <li><router-link to='/jiangxi/gz' active-class="selected">赣州市</router-link></li>
+            <li><input type="checkbox"><router-link to='/jiangxi/gz' active-class="selected">赣州市</router-link></li>
 
         </ul>
         <router-view></router-view>
@@ -15,6 +15,9 @@
 <script>
 export default {
     name:'JiangXi',
+    beforeDestroy(){
+        console.log("@江西省下面的市组件被销毁了")
+    },
     methods: {
         // 编程式路由导航，适合按钮图片跳转路由组件
         // 注意：这里一定调用路由器对象现有的api，api分为push和replace模式，括号写to后面的属性值
