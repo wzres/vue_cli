@@ -30,6 +30,7 @@ const router = new VueRouter({
 
                     // 给路由对象添加自定义属性的话，需要在路由对象的meta（路由元）中定义。
                     // 属性名随意，这个值为true，表示需要鉴权
+                    // to_admin
                     meta : {isAuth : true}
                 },
 
@@ -38,6 +39,7 @@ const router = new VueRouter({
                     path:'gz',
                     component:GanZhou,
                     // 属性名随意，这个值为true，表示需要鉴权
+                    // to_admin
                     meta : {isAuth : true}
                 }
             ]
@@ -65,18 +67,11 @@ router.beforeEach((to,from,next) =>{
     console.log(to)
     let loginName = "min"
     // 对于鉴权的路由比较少的情况下：
-    /* if(to.name=== 'jiang' || to.name === 'zhou'){
-        if(loginName === "admin"){
-            next()
-        }else alert('你无权访问')
-    }else next() */
+    // to_admin
 
     // 对于鉴权的路由比较多的情况下：
-    if(to.meta.isAuth){
-        if(loginName === "admin"){
-            next()
-        }else alert('你无权访问')
-    }else next()
+    // to_admin
+ 
 })
 
 
