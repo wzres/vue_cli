@@ -7,7 +7,6 @@ import GuangDong from '../Pages/GuangDong'
 // 创建并暴露一个路由器对象
 export default new VueRouter({
     routes : [
-        // 每一个key对应一个路径，value对应该路径要展示的组件
         // 注意：对于子路由不要加/
     ]
 })
