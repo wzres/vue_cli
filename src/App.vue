@@ -1,18 +1,18 @@
 <template>
 <!-- 注册在哪，就在哪使用子组件 -->
   <div>
-    <student/>
+    <Count/>
   </div>
 </template>
 
 <script>
 // 引入子组件
-import Student from './components/Student.vue'
+import Count from './components/Count.vue'
 
 export default {
     name:'App',
     components:{
-      Student
+      Count
     }
 }
 </script>
