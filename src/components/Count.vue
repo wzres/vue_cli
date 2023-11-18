@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>当前求和为{{$store.state.sum}}</h1>
+    <h3>当前求和方法10倍为：???</h3>
     <select v-model.number="n">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -14,6 +15,8 @@
 </template>
 
 <script>
+// 引入mapState,mapGetters,mapActions,mapMutations
+import {mapState,mapGetters,mapActions,mapMutations} from 'vuex'
 //默认暴露组件
 export default {
     name:'Count',
@@ -28,16 +31,28 @@ export default {
       // 调用commit直接到mutations
 
       // 加
+      jia(){
+
+      },
 
       // 减
+      jian(){
+
+      },
 
 
       // 有业务逻辑或AJAX请求，需要调用dispatch联系actions处理业务
       // 调用dispatch来到actions
 
       // 奇数加
+      jiaOdd(){
+
+      },
       
       // 等一等再加
+      jiaWait(){
+
+      }
     },
 }
 </script>
