@@ -40,7 +40,7 @@ export default {
       // 如果没有业务逻辑或AJAX请求，可以直接调用commit联系mutations修改数据
       // 调用commit直接到mutations
       // 借助mapMutations生成对应的方法，方法中会调用commit去联系mutations
-      // 语法：...mapActions(事件方法名:'与mutations对话的key')
+      // 语法：...mapMutations(事件方法名:'与mutations对话的key')
 
 
 
